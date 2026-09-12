@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #000000;
+  --cream: #fcf6e6;
+  --orange: #fe591f;
+  --muted: #b8b09c;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-orange: var(--orange);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-ibm);
+  --font-display: var(--font-bebas);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-ibm), system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+.font-display {
+  font-family: var(--font-bebas), Impact, sans-serif;
+}
+
+a {
+  color: inherit;
+}
