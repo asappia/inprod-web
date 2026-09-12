@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { seoGraph } from "@/lib/seo-graph";
 import { DESCRIPTION, SITE_URL, TITLE } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Bebas_Neue, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
@@ -78,6 +80,8 @@ plausible.init()`}
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
