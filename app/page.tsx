@@ -1,4 +1,5 @@
 import { CopyFeed } from "@/components/CopyFeed";
+import { ListenBadges } from "@/components/ListenBadges";
 import { formatDuration, formatPubDate, getLatestEpisode } from "@/lib/feed";
 import { FEED_URL } from "@/lib/site";
 import Image from "next/image";
@@ -49,10 +50,11 @@ export default async function Home() {
           <p className="mt-4 max-w-md text-lg font-medium">
             One (tech) story a day, and the call I’d actually make.
           </p>
-          <div className="mt-6 max-w-xl">
+          <div className="mt-6 max-w-2xl">
+            <ListenBadges />
             <CopyFeed />
             <p className="mt-2 text-sm text-muted">
-              Paste that URL into Apple Podcasts, Overcast, Pocket Casts, or any app that takes RSS.
+              Or paste that URL into any app that takes an RSS feed.
             </p>
           </div>
         </div>

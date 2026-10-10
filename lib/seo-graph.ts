@@ -1,4 +1,4 @@
-import { AUTHOR, COVER_URL, DESCRIPTION, FEED_URL, SITE_URL, TITLE } from "./site";
+import { AUTHOR, COVER_URL, DESCRIPTION, FEED_URL, LISTEN, SITE_URL, TITLE } from "./site";
 
 export function seoGraph() {
   return {
@@ -30,6 +30,7 @@ export function seoGraph() {
         url: `${SITE_URL}/`,
         webFeed: FEED_URL,
         image: COVER_URL,
+        sameAs: LISTEN.map((item) => item.href),
         inLanguage: "en-GB",
         author: { "@id": `${SITE_URL}/#person` },
         creator: { "@id": `${SITE_URL}/#person` },
